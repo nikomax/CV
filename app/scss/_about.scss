@@ -1,0 +1,39 @@
+.about {
+  background-image: url("../img/frontendword.png");
+  background-color: beige;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list__link {
+  text-transform: uppercase;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desc {
+  text-align: center;
+}
+
+.avatar {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar__img {
+  height: inherit;
+}
