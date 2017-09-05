@@ -11,17 +11,28 @@ a {
 
 .container {
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 10px; }
 
 .about {
   background-image: url("../img/frontendword.png");
-  background-color: beige;
   -webkit-background-size: cover;
           background-size: cover;
   background-position: center;
-  height: 100vh; }
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden; }
+
+.container--100vh {
+  height: inherit; }
+
+.nav {
+  height: 50px;
+  max-width: 700px;
+  margin: 0 auto; }
 
 .nav__list {
+  height: inherit;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,10 +45,50 @@ a {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .list__link {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 20px;
+  color: darkslategray;
+  position: relative;
+  padding: 10px; }
+
+.list__link::before {
+  display: block;
+  content: "";
+  background-color: #774953;
+  height: 4px;
+  position: absolute;
+  width: 0%;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.list__link:hover::before {
+  width: 100%; }
+
+.list__link::after {
+  display: block;
+  content: "";
+  background-color: #774953;
+  height: 4px;
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.list__link:hover::after {
+  width: 100%; }
 
 .about-container {
   display: -webkit-box;
@@ -56,7 +107,8 @@ a {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  height: inherit; }
 
 .desc {
   text-align: center; }
@@ -76,18 +128,84 @@ a {
           background-size: cover;
   background-image: url("../img/skills.png");
   background-position: center;
-  height: 100vh; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+.skills__title {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center; }
+
+.skills__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 80px; }
+
+.skills__item {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+
+.skills__item::before {
+  display: block;
+  height: 50px;
+  width: 50px; }
+
+.html5::before {
+  content: url("../img/logo/html.jpg"); }
+
+.css3::before {
+  content: url("../img/logo/css.png"); }
+
+.pug::before {
+  content: url("../img/logo/pug.png"); }
+
+.gupl::before {
+  content: url("../img/logo/gulp.png"); }
+
+.sass::before {
+  content: url("../img/logo/sass.png"); }
+
+.photoshop::before {
+  content: url("../img/logo/ps.png"); }
+
+.rwd::before {
+  content: url("../img/logo/rwd.jpg"); }
+
+.js::before {
+  content: url("../img/logo/js.png"); }
+
+.jquery::before {
+  content: url("../img/logo/jQurery.png"); }
+
+.git::before {
+  content: url("../img/logo/git.png"); }
 
 .portfolio {
-  height: 100vh;
   background-image: url("../img/frontend.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .contacts {
   -webkit-background-size: cover;
           background-size: cover;
   background-image: url("../img/social.png");
-  background-position: center;
-  height: 100vh; }
+  background-repeat: no-repeat; }

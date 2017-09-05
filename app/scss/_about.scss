@@ -1,19 +1,67 @@
 .about {
   background-image: url("../img/frontendword.png");
-  background-color: beige;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
+}
+
+.container--100vh {
+  height: inherit;
+}
+
+.nav{
+  height: 50px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .nav__list {
+  height: inherit;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .list__link {
   text-transform: uppercase;
+  font-size: 20px;
+  color: darkslategray;
+  position: relative;
+  padding: 10px;
+}
+.list__link::before {
+  display: block;
+  content: "";
+  background-color: #774953;
+  height: 4px;
+  position: absolute;
+  width: 0%;
+  top: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+.list__link:hover::before {
+  width: 100%;
+}
+
+.list__link::after {
+  display: block;
+  content: "";
+  background-color: #774953;
+  height: 4px;
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.list__link:hover::after {
+  width: 100%;
 }
 
 .about-container {
@@ -21,6 +69,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: inherit;
 }
 
 .desc {
